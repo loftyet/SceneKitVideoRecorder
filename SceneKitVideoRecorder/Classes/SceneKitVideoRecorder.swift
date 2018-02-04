@@ -56,6 +56,11 @@ public class SceneKitVideoRecorder: NSObject, AVAudioRecorderDelegate {
   public convenience init(withARSCNView view: ARSCNView, options: Options = .`default`) throws {
     try self.init(scene: view, options: options)
   }
+    
+    @available(iOS 11.0, *)
+    public convenience init(withSCNView view: SCNView, options: Options = .`default`) throws {
+        try self.init(scene: view, options: options)
+    }
 
   public init(scene: SCNView, options: Options = .`default`, setupAudio: Bool = true) throws {
 
